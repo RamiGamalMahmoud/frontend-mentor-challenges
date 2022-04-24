@@ -96,6 +96,10 @@ ul {
 .durations .duration {
   cursor: pointer;
   margin-top: 1rem;
+  color: #bdc1ff;
+}
+.durations .duration:hover, .durations .duration.selected-duration {
+  color: white;
 }
 .durations .duration:first-of-type {
   margin-top: 0;
@@ -127,6 +131,9 @@ ul {
     margin-left: 1rem;
   }
 
+  .durations {
+    justify-content: space-between;
+  }
   .durations .duration {
     margin-top: 0rem;
   }
@@ -202,7 +209,7 @@ ul {
 }
 .tiemframes .duration {
   padding-right: 4rem;
-  min-width: 200px;
+  width: 200px;
 }
 .tiemframes .duration .current {
   font-size: 3.2rem;
