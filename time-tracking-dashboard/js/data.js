@@ -101,4 +101,10 @@ export const activities =  [
       }
     }
   }
-]
+];
+
+export const durations = {
+  'daily' : 'Day',
+  'weekly' : 'Week',
+  'monthly' : 'Month'
+};
