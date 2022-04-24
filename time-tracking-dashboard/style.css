@@ -202,6 +202,7 @@ ul {
 }
 .tiemframes .duration {
   padding-right: 4rem;
+  min-width: 200px;
 }
 .tiemframes .duration .current {
   font-size: 3.2rem;
