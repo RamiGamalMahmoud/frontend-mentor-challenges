@@ -1,3 +1,4 @@
+@use './colors';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
 *,
@@ -9,8 +10,33 @@
 body{
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: colors.$very-dark-blue;
+  font-family: Rubik;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul{
   list-style: none;
+}
+
+.container{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+@media screen and (max-width: 450px) {
+  .container{
+    align-items: flex-start;
+    padding: 5rem 0;
+  }
 }

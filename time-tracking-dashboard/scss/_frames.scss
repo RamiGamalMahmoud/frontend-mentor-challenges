@@ -1,0 +1,33 @@
+@use './colors';
+
+.tiemframes{
+  .work-timeframe{
+    background-color: colors.$orange;
+    background-image: url('images/icon-work.svg');
+  }
+
+  .play-timeframe{
+    background-color: colors.$soft-blue;
+    background-image: url('images/icon-play.svg');
+  }
+
+  .exercise-timeframe{
+    background-color: colors.$lime-green;
+    background-image: url('images/icon-exercise.svg');
+  }
+
+  .study-timeframe{
+    background-color: colors.$light-red;
+    background-image: url('images/icon-study.svg');
+  }
+  
+  .social-timeframe{
+    background-color: colors.$violet;
+    background-image: url('images/icon-social.svg');
+  }
+  
+  .self-care-timeframe{
+    background-color: colors.$soft-orange;
+    background-image: url('images/icon-self-care.svg');
+  }
+}

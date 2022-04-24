@@ -1,0 +1,11 @@
+.dashboard{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+@media screen and (max-width: 450px) {
+  .dashboard{
+    flex-direction: column;
+  }
+}
