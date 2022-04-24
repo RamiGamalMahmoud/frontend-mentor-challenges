@@ -54,6 +54,11 @@
   .duration {
     cursor: pointer;
     margin-top: 1rem;
+    color: colors.$pale-blue;
+    &:hover,
+    &.selected-duration{
+      color: white;
+    }
 
     &:first-of-type {
       margin-top: 0;
@@ -94,6 +99,7 @@
   }
 
   .durations {
+    justify-content: space-between;
     .duration {
       margin-top: 0rem;
     }
