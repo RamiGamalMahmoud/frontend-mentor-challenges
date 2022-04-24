@@ -105,3 +105,43 @@
     }
   }
 }
+
+@media screen and (max-width: 850px) {
+
+  .durations,
+  .profile-info,
+  .user-name {
+    flex-direction: row;
+  }
+
+  .dashboard-header {
+  
+    .profile-info {
+  
+      padding: 2rem;
+      .user-name {
+        font-size: 1.5rem;
+      }
+  
+      .avatar {
+        width: 3.5rem;
+      }
+    }
+  }
+
+  .user-info{
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+
+  .last-name{
+    margin-left: 1rem;
+  }
+
+  .durations {
+    justify-content: space-between;
+    .duration {
+      margin-top: 0rem;
+    }
+  }
+}
