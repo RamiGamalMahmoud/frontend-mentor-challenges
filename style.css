@@ -331,7 +331,7 @@ header .container {
 }
 .solution-under-development::before {
   content: "Solution is under development";
-  color: #f0f0f0;
+  color: white;
   text-align: center;
   text-transform: uppercase;
   padding-top: 2rem;

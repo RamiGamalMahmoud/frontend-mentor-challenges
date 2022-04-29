@@ -126,8 +126,7 @@
 
 .solution-under-development::before{
   content: 'Solution is under development';
-  color: colors.$white;
-  // text-shadow: 0 0 5px colors.$white;
+  color: white;
   text-align: center;
   
   text-transform: uppercase;
