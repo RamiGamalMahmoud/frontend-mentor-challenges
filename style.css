@@ -331,8 +331,9 @@ header .container {
 }
 .solution-under-development::before {
   content: "Solution is under development";
-  color: white;
+  color: black;
   text-align: center;
+  text-decoration: underline;
   text-transform: uppercase;
   padding-top: 2rem;
   font-size: 2rem;
@@ -343,7 +344,7 @@ header .container {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(250, 250, 250, 0.6);
 }
 
 @media screen and (max-width: 414px) {
