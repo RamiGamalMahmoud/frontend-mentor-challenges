@@ -1,0 +1,29 @@
+@use  './menu-button';
+@use './menu';
+
+header {
+  width: 100%;
+  padding: .5rem 0;
+  background-color: White;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  box-shadow: 0 0 .5rem gray;
+
+
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    .container {
+      flex-direction: column;
+    }
+  }
+}

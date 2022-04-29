@@ -1,0 +1,116 @@
+@use './colors';
+
+.card {
+  width: 25%;
+  color:colors.$white;
+  background-color:colors.$dark-blue;
+  padding: 2rem;
+  border-radius: 20px;
+
+  .submit {
+    margin-top: 2rem;
+
+    button {
+      width: 100%;
+      border-radius: 50px;
+      height: 3rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color:colors.$orange;
+      color:colors.$white;
+      letter-spacing: 5px;
+      border: 0;
+      cursor: pointer;
+
+      &:hover{
+        background-color:colors.$white;
+        color:colors.$orange;
+      }
+    }
+
+  }
+
+  .star-container {
+    margin-top: 0;
+
+  }
+
+  .star {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$accent;
+  }
+}
+
+.message {
+  p {
+    color: colors.$light-grey;
+    line-height: 1.5;
+  }
+}
+
+.thank-stat-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .message {
+    p {
+      color: colors.$light-grey;
+      padding: 0 2.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  .slected-stars{
+    padding: 5px 20px;
+    border-radius: 2rem;
+    background-color: colors.$accent;
+    color:colors.$orange;
+  }
+}
+
+.selections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: colors.$accent;
+    text-align: center;
+    cursor: pointer;
+    line-height: 50px;
+
+    &:hover {
+      background-color: colors.$medium-grey;
+    }
+  }
+
+  .number-radio:checked+label {
+    background-color: colors.$orange;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: flex;
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: 95%;
+    padding: 1rem;
+  }
+}

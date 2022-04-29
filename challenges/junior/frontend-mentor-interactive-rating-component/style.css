@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Overpass;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121417;
+}
+
+.card {
+  width: 25%;
+  color: white;
+  background-color: #252d37;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.card .submit {
+  margin-top: 2rem;
+}
+.card .submit button {
+  width: 100%;
+  border-radius: 50px;
+  height: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fb7413;
+  color: white;
+  letter-spacing: 5px;
+  border: 0;
+  cursor: pointer;
+}
+.card .submit button:hover {
+  background-color: white;
+  color: #fb7413;
+}
+.card .star-container {
+  margin-top: 0;
+}
+.card .star {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323A47;
+}
+
+.message p {
+  color: #959eac;
+  line-height: 1.5;
+}
+
+.thank-stat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.thank-stat-container .message p {
+  color: #959eac;
+  padding: 0 2.8rem;
+  line-height: 1.5;
+}
+.thank-stat-container .slected-stars {
+  padding: 5px 20px;
+  border-radius: 2rem;
+  background-color: #323A47;
+  color: #fb7413;
+}
+
+.selections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.selections .number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #323A47;
+  text-align: center;
+  cursor: pointer;
+  line-height: 50px;
+}
+.selections .number:hover {
+  background-color: #7c8798;
+}
+.selections .number-radio:checked + label {
+  background-color: #fb7413;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

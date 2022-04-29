@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white-100: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-200: hsla(0, 0%, 100%, 0.6);
+  --radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.image-part {
+  width: 50%;
+  height: 556px;
+  background-image: url("./images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  overflow: hidden;
+  position: relative;
+}
+.image-part::before {
+  content: "";
+  position: absolute;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--soft-violet);
+  mix-blend-mode: multiply;
+}
+
+@media screen and (max-width: 375px) {
+  .image-part {
+    background-image: url("./images/image-header-mobile.jpg");
+    width: 100%;
+    height: 188px;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .image-part::before {
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+}
+.content-part {
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 3rem;
+  font-family: Inter;
+}
+.content-part .title h1 {
+  font-size: 3rem;
+}
+.content-part .title .hilight {
+  color: var(--soft-violet);
+}
+.content-part .discreption,
+.content-part .statistics .text {
+  color: var(--slightly-transparent-white-100);
+}
+.content-part .discreption {
+  margin-top: -1rem;
+  padding-right: 8rem;
+}
+.content-part .statistics {
+  margin-top: 7rem;
+  padding-right: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content-part .statistics .statistics-part {
+  display: flex;
+  flex-direction: column;
+}
+.content-part .statistics .statistics-part .number {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.content-part .statistics .statistics-part .text {
+  text-transform: uppercase;
+  font-family: "Lexend Deca";
+}
+
+@media screen and (max-width: 375px) {
+  .content-part {
+    width: 100%;
+    padding: 1rem;
+  }
+  .content-part .title h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .content-part .discreption {
+    padding: 0 1rem;
+    line-height: 2;
+    text-align: center;
+  }
+  .content-part .statistics {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  .content-part .statistics .statistics-part {
+    margin-top: 2rem;
+  }
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 375px) {
+  body, .container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .container {
+    width: 90%;
+    padding: 5rem 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,34 @@
+.image-part {
+
+  width: 50%;
+  height: 556px;
+  background-image: url("./images/image-header-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  overflow: hidden;
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--soft-violet);
+    mix-blend-mode: multiply;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .image-part{
+    background-image: url("./images/image-header-mobile.jpg");
+    width: 100%;
+    height: 188px;
+    border-radius: var(--radius) var(--radius) 0 0;
+
+    &::before{
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+  }
+}

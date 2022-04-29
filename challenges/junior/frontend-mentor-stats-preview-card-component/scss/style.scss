@@ -1,0 +1,31 @@
+@use "./base";
+@use "./image-part";
+@use "./content-part";
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+.container{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 375px) {
+  body, .container{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .container{
+    width: 90%;
+    padding: 5rem 0.5rem;
+  }
+}

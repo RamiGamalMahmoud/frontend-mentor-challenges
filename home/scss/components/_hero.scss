@@ -1,0 +1,66 @@
+@use '../colors';
+
+.hero {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 96px;
+    color: colors.$dark-blue;
+    font-family: 'Barlow', sans-serif;
+
+    background: colors.$dark-blue;
+    background: -webkit-linear-gradient(to right, colors.$dark-blue 0%, colors.$blue 100%);
+    background: -moz-linear-gradient(to right, colors.$dark-blue 0%, colors.$blue 100%);
+    background: linear-gradient(to right, colors.$dark-blue 0%, colors.$blue 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+  h2 {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: colors.$blue;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: inder;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .greeting{
+
+    h2 {
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero {
+    .greeting {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
