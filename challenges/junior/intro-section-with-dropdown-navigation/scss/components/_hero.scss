@@ -1,0 +1,127 @@
+@use '../colors';
+@use '../mixins';
+
+main .container {
+  width: 98%;
+  margin: auto;
+  @include mixins.desktop() {
+    width: 80%;
+  }
+}
+
+.hero {
+  display: flex;
+  height: 80vh;
+
+  @include mixins.mobile() {
+    flex-direction: column-reverse;
+
+    .discreption{
+      height: 50%;
+    }
+
+    .discreption,
+    .discreption-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include mixins.desktop() {
+    flex-direction: row;
+  }
+
+  .discreption {
+    @include mixins.desktop() {
+      padding-top: 3rem;
+      width: 60%;
+    }
+  }
+
+  .discreption--title {
+    font-weight: 700;
+
+    @include mixins.desktop() {
+      display: flex;
+      flex-direction: column;
+      font-size: 5rem;
+    }
+
+  }
+
+  .discreption--content {
+    color: colors.$medium-gray;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+
+    @include mixins.desktop() {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mixins.mobile() {
+      text-align: center;
+    }
+  }
+
+  .btn-more {
+    display: inline-block;
+    background-color: colors.$almost-black;
+    color: white;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 0.7rem;
+    margin-top: 1rem;
+    
+    @include mixins.desktop() {
+      margin-top: 4rem;
+    }
+
+    &:hover {
+      color: colors.$almost-black;
+      background-color: white;
+      outline: 1px solid colors.$almost-black;
+    }
+  }
+}
+
+.images-wrapper {
+  
+  margin-top: 2rem;
+  @include mixins.desktop() {
+    margin-top: 8rem;
+    img:not(:first-of-type){
+      margin-left: 3rem;
+    }
+  }
+
+  @include mixins.mobile() {
+    mig{
+      display: inline-block;
+      width: 23%;
+      margin: auto;
+    }
+  }
+}
+
+.image-wrapper {
+
+  background-repeat: no-repeat;
+  @include mixins.mobile() {
+    height: 50%;
+    
+    background: url('images/image-hero-mobile.png');
+    background-size: cover;
+  }
+
+  
+  @include mixins.desktop() {
+    background: url('images/image-hero-desktop.png');
+    width: 41%;
+    background-size: cover;
+  }
+}

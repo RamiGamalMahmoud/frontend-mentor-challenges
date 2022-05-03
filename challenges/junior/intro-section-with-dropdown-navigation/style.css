@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Epilogue", sans-serif;
+  background-color: #fafafa;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: dimgray;
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.nav-menu-button {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2;
+}
+.nav-menu-button .menu-button-line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .nav-menu-button {
+    display: none;
+  }
+}
+
+.main-menu {
+  position: relative;
+}
+.main-menu .sub-menu-button::after {
+  content: "";
+  right: -1rem;
+  top: 1.2rem;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #141414;
+  border-top: none;
+  border-left: none;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.main-menu .sub-menu-button:hover {
+  color: #141414;
+}
+.main-menu .sub-menu-button:hover::after {
+  top: 1.4rem;
+  transform: rotate(224deg);
+}
+.main-menu .menu-button {
+  position: relative;
+  color: dimgray;
+}
+@media screen and (min-width: 1024px) {
+  .main-menu .menu-button {
+    cursor: pointer;
+    margin-left: 2rem;
+    padding: 1rem 0;
+  }
+}
+.main-menu .menu-button:hover {
+  color: #141414;
+}
+@media screen and (max-width: 414px) {
+  .main-menu > li:not(:first-of-type) {
+    margin-top: 1rem;
+  }
+}
+.main-menu .sub-menu {
+  display: none;
+}
+.main-menu .sub-menu li a {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.main-menu .sub-menu li a img {
+  width: 1rem;
+  margin-right: 1rem;
+}
+.main-menu .menu-toggle:checked + .sub-menu {
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  .main-menu .menu-toggle:hover + .sub-menu,
+.main-menu .sub-menu:hover {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    background-color: white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .login {
+    margin-top: 2rem;
+  }
+  .login li {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .login ul li:last-of-type a {
+    border: 2px solid dimgray;
+    border-radius: 1rem;
+  }
+  .login ul li a {
+    padding: 0.8rem 1rem;
+  }
+  .login ul li a:hover {
+    color: #141414;
+    border-color: #141414;
+  }
+}
+
+.nav-wrapper {
+  display: none;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 1024px) {
+  .nav-wrapper {
+    display: block;
+    width: calc(100% - 84px);
+  }
+  .nav-wrapper .nav-content,
+.nav-wrapper .main-menu,
+.nav-wrapper .login ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-wrapper .nav-content {
+    justify-content: space-between;
+    margin-left: 2rem;
+  }
+}
+
+.nav-toggle:checked + .nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 414px) {
+  .nav-content {
+    background-color: white;
+    height: 100%;
+    width: 65%;
+    padding-top: 4rem;
+    padding-left: 1rem;
+  }
+}
+
+header .header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  header .header-content {
+    justify-content: start;
+  }
+}
+
+main .container {
+  width: 98%;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  main .container {
+    width: 80%;
+  }
+}
+
+.hero {
+  display: flex;
+  height: 80vh;
+}
+@media screen and (max-width: 414px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+  .hero .discreption {
+    height: 50%;
+  }
+  .hero .discreption,
+.hero .discreption-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero .discreption {
+    padding-top: 3rem;
+    width: 60%;
+  }
+}
+.hero .discreption--title {
+  font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  .hero .discreption--title {
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+  }
+}
+.hero .discreption--content {
+  color: dimgray;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  .hero .discreption--content {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 414px) {
+  .hero .discreption--content {
+    text-align: center;
+  }
+}
+.hero .btn-more {
+  display: inline-block;
+  background-color: #141414;
+  color: white;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .hero .btn-more {
+    margin-top: 4rem;
+  }
+}
+.hero .btn-more:hover {
+  color: #141414;
+  background-color: white;
+  outline: 1px solid #141414;
+}
+
+.images-wrapper {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .images-wrapper {
+    margin-top: 8rem;
+  }
+  .images-wrapper img:not(:first-of-type) {
+    margin-left: 3rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  .images-wrapper mig {
+    display: inline-block;
+    width: 23%;
+    margin: auto;
+  }
+}
+
+.image-wrapper {
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 414px) {
+  .image-wrapper {
+    height: 50%;
+    background: url("images/image-hero-mobile.png");
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .image-wrapper {
+    background: url("images/image-hero-desktop.png");
+    width: 41%;
+    background-size: cover;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

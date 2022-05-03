@@ -1,0 +1,17 @@
+@use '../mixins';
+
+header {
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+
+    @include mixins.desktop() {
+      justify-content: start;
+    }
+
+  }
+}
