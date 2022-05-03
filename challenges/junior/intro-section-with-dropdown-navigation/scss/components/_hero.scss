@@ -1,5 +1,6 @@
 @use '../colors';
 @use '../mixins';
+@use './image-wrapper';
 
 main .container {
   width: 98%;
@@ -108,20 +109,3 @@ main .container {
   }
 }
 
-.image-wrapper {
-
-  background-repeat: no-repeat;
-  @include mixins.mobile() {
-    height: 50%;
-    
-    background: url('images/image-hero-mobile.png');
-    background-size: cover;
-  }
-
-  
-  @include mixins.desktop() {
-    background: url('images/image-hero-desktop.png');
-    width: 41%;
-    background-size: cover;
-  }
-}

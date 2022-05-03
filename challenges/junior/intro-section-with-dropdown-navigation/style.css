@@ -204,6 +204,24 @@ header .header-content {
   }
 }
 
+.image-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 414px) {
+  .image-wrapper {
+    height: 50%;
+    background: url("images/image-hero-mobile.png");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .image-wrapper {
+    background: url("images/image-hero-desktop.png");
+    width: 41%;
+    background-size: cover;
+  }
+}
+
 main .container {
   width: 98%;
   margin: auto;
@@ -308,24 +326,6 @@ main .container {
     display: inline-block;
     width: 23%;
     margin: auto;
-  }
-}
-
-.image-wrapper {
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 414px) {
-  .image-wrapper {
-    height: 50%;
-    background: url("images/image-hero-mobile.png");
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .image-wrapper {
-    background: url("images/image-hero-desktop.png");
-    width: 41%;
-    background-size: cover;
   }
 }
 
