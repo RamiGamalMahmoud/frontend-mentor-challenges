@@ -1,0 +1,20 @@
+@use '../mixins';
+
+.image-wrapper {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @include mixins.mobile() {
+    height: 50%;
+    
+    background: url('images/image-hero-mobile.png');
+  }
+
+  
+  @include mixins.desktop() {
+    background: url('images/image-hero-desktop.png');
+    width: 41%;
+    background-size: cover;
+  }
+}
