@@ -147,7 +147,7 @@
 
 .nav-wrapper {
   display: none;
-  font-size: .9rem;
+  font-size: 1rem;
 
   @include mixins.desktop() {
     display: block;

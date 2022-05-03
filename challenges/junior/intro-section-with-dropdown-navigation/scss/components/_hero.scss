@@ -3,7 +3,7 @@
 @use './image-wrapper';
 
 main .container {
-  width: 98%;
+  width: 100%;
   margin: auto;
   @include mixins.desktop() {
     width: 80%;
@@ -12,21 +12,21 @@ main .container {
 
 .hero {
   display: flex;
-  height: 80vh;
 
   @include mixins.mobile() {
     flex-direction: column-reverse;
 
     .discreption{
-      height: 50%;
+      padding: 0 1rem;
+      text-align: center;
     }
 
-    .discreption,
+
     .discreption-text {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
     }
   }
 
@@ -91,21 +91,25 @@ main .container {
 }
 
 .images-wrapper {
-  
+
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: start;
   margin-top: 2rem;
-  @include mixins.desktop() {
+  column-gap: 2rem;
+  
+  @include mixins.desktop(){
     margin-top: 8rem;
-    img:not(:first-of-type){
-      margin-left: 3rem;
-    }
+    width: 70%;
   }
 
-  @include mixins.mobile() {
-    mig{
-      display: inline-block;
-      width: 23%;
-      margin: auto;
+  img{
+
+    @include mixins.mobile(){
+      width: 100%;
     }
+
   }
 }
 

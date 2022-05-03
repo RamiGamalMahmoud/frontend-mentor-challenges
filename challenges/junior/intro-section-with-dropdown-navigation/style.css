@@ -149,7 +149,7 @@ a {
 
 .nav-wrapper {
   display: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 1024px) {
   .nav-wrapper {
@@ -205,13 +205,13 @@ header .header-content {
 }
 
 .image-wrapper {
-  background-repeat: no-repeat;
-  background-size: cover;
+  aspect-ratio: 1.2;
 }
 @media screen and (max-width: 414px) {
   .image-wrapper {
-    height: 50%;
     background: url("images/image-hero-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -223,7 +223,7 @@ header .header-content {
 }
 
 main .container {
-  width: 98%;
+  width: 100%;
   margin: auto;
 }
 @media screen and (min-width: 1024px) {
@@ -234,21 +234,20 @@ main .container {
 
 .hero {
   display: flex;
-  height: 80vh;
 }
 @media screen and (max-width: 414px) {
   .hero {
     flex-direction: column-reverse;
   }
   .hero .discreption {
-    height: 50%;
+    padding: 0 1rem;
+    text-align: center;
   }
-  .hero .discreption,
-.hero .discreption-text {
+  .hero .discreption-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -311,21 +310,22 @@ main .container {
 }
 
 .images-wrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: start;
   margin-top: 2rem;
+  column-gap: 2rem;
 }
 @media screen and (min-width: 1024px) {
   .images-wrapper {
     margin-top: 8rem;
-  }
-  .images-wrapper img:not(:first-of-type) {
-    margin-left: 3rem;
+    width: 70%;
   }
 }
 @media screen and (max-width: 414px) {
-  .images-wrapper mig {
-    display: inline-block;
-    width: 23%;
-    margin: auto;
+  .images-wrapper img {
+    width: 100%;
   }
 }
 
