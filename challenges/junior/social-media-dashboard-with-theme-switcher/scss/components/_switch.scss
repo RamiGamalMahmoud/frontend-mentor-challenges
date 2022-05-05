@@ -1,0 +1,40 @@
+@use '../colors';
+
+#switch {
+  display: none;
+}
+
+#switch-btn {
+  cursor: pointer;
+  background-image: colors.$toggle;
+  width: 48px;
+  height: 24px;
+  display: block;
+  border-radius: 15px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background: var(--card-bg);
+    border-radius: 90px;
+    transition: 0.3s;
+    transform: translateY(-50%);
+  }
+}
+
+#switch:checked+#switch-btn {
+
+  &:after {
+    left: calc(100% - 3px);
+    transform: translate(-100%, -50%);
+  }
+}
+
+// #switch-btn:active:after {
+//   width: 130px;
+// }
