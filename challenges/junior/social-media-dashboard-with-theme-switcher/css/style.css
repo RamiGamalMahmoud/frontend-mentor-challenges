@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+:root {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg-pattern: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-1: hsl(228, 34%, 66%);
+  --text-2: hsl(0, 0%, 100%);
+}
+
+[data-theme=light] {
+  --bg: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --text-1: hsl(228, 12%, 44%);
+  --text-2: hsl(230, 17%, 14%);
+}
+
+#switch {
+  display: none;
+}
+
+#switch-btn {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+  width: 48px;
+  height: 24px;
+  display: block;
+  border-radius: 15px;
+  position: relative;
+}
+#switch-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: var(--card-bg);
+  border-radius: 90px;
+  transition: 0.3s;
+  transform: translateY(-50%);
+}
+
+#switch:checked + #switch-btn:after {
+  left: calc(100% - 3px);
+  transform: translate(-100%, -50%);
+}
+
+/*# sourceMappingURL=style.css.map */
