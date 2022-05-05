@@ -4,6 +4,11 @@
   display: none;
 }
 
+.switch-text{
+  color: var(--text-1);
+  font-weight: 700;
+}
+
 #switch-btn {
   cursor: pointer;
   background-image: colors.$toggle;
