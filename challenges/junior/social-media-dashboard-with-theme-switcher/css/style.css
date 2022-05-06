@@ -265,7 +265,7 @@ header .switch-container {
   align-items: baseline;
   grid-template-columns: auto auto;
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 2rem;
   background-color: var(--card-bg);
 }
 .overview-card:hover {
@@ -274,17 +274,23 @@ header .switch-container {
 .overview-card .overview-type {
   font-weight: 700;
   color: var(--text-1);
+  justify-self: start;
 }
 .overview-card .total {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-2);
+  justify-self: start;
+}
+.overview-card .icon {
+  justify-self: end;
 }
 .overview-card .status {
   display: flex;
   align-items: baseline;
   font-size: 0.9rem;
   font-weight: 700;
+  justify-self: end;
 }
 .overview-card .status .arrow {
   width: 10px;

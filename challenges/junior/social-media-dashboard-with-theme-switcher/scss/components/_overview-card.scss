@@ -23,7 +23,7 @@
   grid-template-columns: auto auto;
   gap: 2rem;
   
-  padding: 1rem 0;
+  padding: 2rem;
   background-color: var(--card-bg);
 
   &:hover{
@@ -33,19 +33,26 @@
   .overview-type{
     font-weight: 700;
     color: var(--text-1);
+    justify-self: start;
   }
 
   .total{
     font-size: 2rem;
     font-weight: 700;
     color: var(--text-2);
+    justify-self: start;
   }
   
+  .icon{
+    justify-self: end;
+  }
+
   .status{
     display: flex;
     align-items: baseline;
     font-size: .9rem;
     font-weight: 700;
+    justify-self: end;
 
     .arrow{
       width: 10px;
