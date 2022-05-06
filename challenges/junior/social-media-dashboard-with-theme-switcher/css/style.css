@@ -291,6 +291,7 @@ header .switch-container {
   font-size: 0.9rem;
   font-weight: 700;
   justify-self: end;
+  gap: 0.3rem;
 }
 .overview-card .status .arrow {
   width: 10px;
