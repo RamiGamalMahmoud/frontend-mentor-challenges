@@ -1,0 +1,74 @@
+@use '../mixins';
+@use '../colors';
+
+.overview{
+  margin-top: 3rem;
+  .title{
+    color: var(--text-2);
+  }
+}
+
+.overview-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2rem;
+}
+
+.overview-card{
+  border-radius: 5px;
+  display: grid;
+  justify-items: center;
+  align-items: baseline;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  
+  padding: 1rem 0;
+  background-color: var(--card-bg);
+
+  &:hover{
+    background-color: var(--car-bg-hover);
+  }
+
+  .overview-type{
+    font-weight: 700;
+    color: var(--text-1);
+  }
+
+  .total{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-2);
+  }
+  
+  .status{
+    display: flex;
+    align-items: baseline;
+    font-size: .9rem;
+    font-weight: 700;
+
+    .arrow{
+      width: 10px;
+      height: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &.up{
+      .arrow{
+        background: url('../../images/icon-up.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      color: colors.$lime-green
+    }
+    &.down{
+      .arrow{
+        background: url('../../images/icon-down.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      color: colors.$bright-red
+    }
+  }
+}
