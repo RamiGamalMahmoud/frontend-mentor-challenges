@@ -40,6 +40,10 @@
   justify-content: center;
   align-items: center;
 
+  &:hover{
+    background-color: var(--car-bg-hover);
+  }
+
   >span {
     padding: 1rem 0;
   }
