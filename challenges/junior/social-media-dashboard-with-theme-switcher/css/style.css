@@ -29,6 +29,16 @@ body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg);
 }
+@media screen and (max-width: 480px) {
+  body {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 884px) {
+  body {
+    padding-bottom: 4rem;
+  }
+}
 
 ul {
   list-style: none;
@@ -276,6 +286,18 @@ header .switch-container {
   grid-template-rows: auto auto;
   gap: 2rem;
 }
+@media screen and (max-width: 884px) {
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .overview-cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .overview-card {
   border-radius: 5px;
@@ -286,6 +308,12 @@ header .switch-container {
   gap: 2rem;
   padding: 2rem;
   background-color: var(--card-bg);
+}
+@media screen and (max-width: 480px) {
+  .overview-card {
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
 }
 .overview-card:hover {
   background-color: var(--car-bg-hover);
@@ -300,6 +328,11 @@ header .switch-container {
   font-weight: 700;
   color: var(--text-2);
   justify-self: start;
+}
+@media screen and (max-width: 480px) {
+  .overview-card .total {
+    font-size: 1.5rem;
+  }
 }
 .overview-card .icon {
   justify-self: end;
